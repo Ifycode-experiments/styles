@@ -12,17 +12,21 @@
       "profile": "https://github.com/Ifycode",
       "contributions": [
         "code",
-        "doc",
-        "infra",
-        "maintenance",
-        "review",
-        "projectManagement",
-        "ideas"
+        "doc"
+      ]
+    },
+    {
+      "login": "all-contributors",
+      "name": "All Contributors",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46410174?v=4",
+      "profile": "https://allcontributors.org",
+      "contributions": [
+        "infra"
       ]
     }
   ],
   "contributorsPerLine": 7,
-  "projectName": "less-css-helper-library",
+  "projectName": "scss-helper-library",
   "projectOwner": "code-collabo",
   "repoType": "github",
   "repoHost": "https://github.com",
