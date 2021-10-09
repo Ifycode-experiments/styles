@@ -5,7 +5,7 @@
   "main": "css/styles.css",
   "scripts": {
     "start": "npm-run-all --parallel less",
-    "less": "nodemon --exec lessc dev/less/styles.less dev/css/styles.css"
+    "less": "nodemon --exec lessc src/less/styles.less src/css/styles.css"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
