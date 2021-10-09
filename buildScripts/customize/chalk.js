@@ -4,7 +4,7 @@ import chalk from 'chalk';
 export const dummyMsg = 'Testing dummy page...';
 
 //srcServer.js
-export const port = 3000;
+export const port = 4040;
 export const portUrl = `http://localhost:${port}`;
 export const openPort = chalk.greenBright('Open:', chalk.blueBright(portUrl));
 
