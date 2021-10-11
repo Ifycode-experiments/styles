@@ -1,6 +1,6 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-module.exports = {
+const config = {
   entry: './src/index.js',
   plugins: [
     new HtmlWebpackPlugin({
@@ -16,5 +16,17 @@ module.exports = {
         use: ['style-loader', 'css-loader']
       }
     ]
+  },
+  /*========================================
+  config properties to be changed in dev or 
+  prod. Create these here 1st to avoid editor
+  warnings
+  =========================================*/
+  mode: '',
+  devtool: '',
+  output: {
+    publicPath: ''
   }
 }
+
+export default config;

@@ -1,6 +1,6 @@
-const path = require('path');
+import { resolve } from 'path';
 
-const config = require('./webpack.config');
+import config from './webpack.config';
 
 config.mode = 'production';
 
@@ -8,7 +8,7 @@ config.devtool = 'source-map';
 
 config.output = {
   filename: 'bundle.js',
-  path: path.resolve(__dirname, 'dist')
+  path: resolve(__dirname, 'dist')
 }
 
-module.exports = config;
+export default config;
