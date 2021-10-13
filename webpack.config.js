@@ -1,26 +1,6 @@
-import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 const config = {
   entry: './src/index.js',
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: 'src/index.html',
-      inject: true,
-      scriptLoading: 'blocking'
-    })
-  ],
-  module: {
-    rules: [
-      {
-        test: /\.(css|less)$/i,
-        use: [
-          'style-loader', 
-          'css-loader',
-          'less-loader'
-        ]
-      }
-    ]
-  },
   /*========================================
   config properties to be changed in dev or 
   prod. Create these here 1st to avoid editor
@@ -30,7 +10,9 @@ const config = {
   devtool: '',
   output: {
     publicPath: ''
-  }
+  },
+  module: {},
+  plugins: [],
 }
 
 export default config;
