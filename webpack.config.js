@@ -1,6 +1,9 @@
 
 const config = {
-  entry: './src/index.js',
+  entry: {
+    index: './src/index.js',
+    library: './src/library.js'
+  },
   /*========================================
   config properties to be changed in dev or 
   prod. Create these here 1st to avoid editor
@@ -11,6 +14,7 @@ const config = {
   output: {
     publicPath: ''
   },
+  optimization: {},
   module: {},
   plugins: [],
 }

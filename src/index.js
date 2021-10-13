@@ -1,8 +1,5 @@
-//import library (less) styles
-import './less/styles.less';
-
-//import localhost:4040 page styles
-import './css/page-wip.css';
+//import page's non-library styles
+import './page/index.less';
 
 //Test that javascript works
 import { dummyMsg } from '../buildscripts/customize/chalk';

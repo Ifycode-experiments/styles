@@ -8,10 +8,37 @@ config.mode = 'production';
 config.devtool = 'source-map';
 
 config.output = {
-  filename: 'bundle.js',
+  filename: '[name].bundle.js',
   path: resolve(__dirname, 'dist'),
   publicPath: '/'
 };
+
+/* 
+//Looks like css split works with or 
+//without this optimization setup:
+
+config.optimization = {
+  splitChunks: {
+    cacheGroups: {
+      indexStyles: {
+        type: 'css/mini-extract',
+        name: 'index',
+        chunks: (chunk) => {
+          return chunk.name === 'index';
+        },
+        enforce: true
+      },
+      helperLibraryStyles: {
+        type: 'css/mini-extract',
+        name: 'library',
+        chunks: (chunk) => {
+          return chunk.name === 'library';
+        },
+        enforce: true
+      }
+    }
+  }
+}*/
 
 config.module = {
   rules: [
@@ -27,15 +54,17 @@ config.module = {
 };
 
 config.plugins = [
+  //Generate an external css file
+  new MiniCssExtractPlugin( {
+    filename: '[name].css'
+  }),
+
   //create HTML file that includes reference to bundled js
   new HtmlWebpackPlugin({
     template: 'src/index.html',
     inject: true,
     scriptLoading: 'blocking'
-  }),
-
-  //Generate an external css file
-  new MiniCssExtractPlugin()
+  })
 ];
 
 export default config;

@@ -7,7 +7,7 @@ config.mode = 'development';
 config.devtool = 'inline-source-map';
 
 config.output = {
-  filename: 'bundle.js',
+  filename: '[name].bundle.js',
   path: resolve(__dirname, 'src'),
   publicPath: '/'
 }
