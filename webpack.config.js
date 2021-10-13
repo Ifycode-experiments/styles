@@ -1,21 +1,8 @@
-import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 const config = {
-  entry: './src/index.js',
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: 'src/index.html',
-      inject: true,
-      scriptLoading: 'blocking'
-    })
-  ],
-  module: {
-    rules: [
-      {
-        test: /\.css$/i,
-        use: ['style-loader', 'css-loader']
-      }
-    ]
+  entry: {
+    index: './src/index.js',
+    library: './src/library.js'
   },
   /*========================================
   config properties to be changed in dev or 
@@ -26,7 +13,10 @@ const config = {
   devtool: '',
   output: {
     publicPath: ''
-  }
+  },
+  optimization: {},
+  module: {},
+  plugins: [],
 }
 
 export default config;
