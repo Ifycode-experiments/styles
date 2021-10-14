@@ -7,7 +7,7 @@
     "prestart": "babel-node buildScripts/customize/startMsg.js",
     "start": "npm-run-all --parallel open:src lint:watch",
     "open:src": "babel-node buildScripts/srcServer.js",
-    "lint": "esw webpack.config.* src buildScripts --color",
+    "lint": "esw webpack.* src buildScripts --color",
     "lint:watch": "npm run lint -- --watch",
     "clean-dist": "rimraf ./dist && mkdir dist",
     "prebuild": "npm-run-all clean-dist",
@@ -65,6 +65,7 @@
     "webpack-cli": "^4.6.0",
     "webpack-dev-middleware": "^4.1.0",
     "webpack-hot-middleware": "^2.25.0",
-    "webpack-md5-hash": "0.0.6"
+    "webpack-md5-hash": "0.0.6",
+    "webpack-merge": "^5.8.0"
   }
 }
