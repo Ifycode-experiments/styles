@@ -4,7 +4,7 @@ import open from 'open';
 import { port, portUrl, openPort } from './customize/chalk';
 
 import webpack from 'webpack';
-import config from '../webpack.dev.config';
+import config from '../webpack.dev.js';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 
 const app = express();
