@@ -1,10 +1,10 @@
 import express from 'express';
 import path from 'path';
 import open from 'open';
-import { port, portUrl, openPort } from './customize/chalk';
+import { port, portUrl, openPort } from './customize/customize';
 
 import webpack from 'webpack';
-import config from '../webpack.dev.js';
+import config from '../webpack.dev';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 
 const app = express();

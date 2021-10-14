@@ -1,3 +1,3 @@
-import { startMsg } from './chalk';
+import { startMsg } from './customize';
 
 console.log(startMsg);

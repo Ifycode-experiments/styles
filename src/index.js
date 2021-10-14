@@ -2,6 +2,6 @@
 import './page/index.less';
 
 //Test that javascript works
-import { dummyMsg } from '../buildscripts/customize/chalk';
+import { jsTestMsg } from '../buildScripts/customize/customize';
 
-console.log(dummyMsg);
+console.log(jsTestMsg);

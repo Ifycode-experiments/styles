@@ -1,5 +1,5 @@
 import webpack from 'webpack';
-import config from '../webpack.prod.js';
+import config from '../webpack.prod';
 import chalk from 'chalk';
 
 webpack(config).run( (err, stats) => {

@@ -1,8 +1,6 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
-## css test
-starter-quick-tour/
-test/
+## npmrc file
 .npmrc
 
 # compiled output
