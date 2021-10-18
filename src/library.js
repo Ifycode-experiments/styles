@@ -1,2 +1,2 @@
 //import all library styles
-import './less/styles.less'
+import './less/02-styles/styles.less';

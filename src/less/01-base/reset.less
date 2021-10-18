@@ -9,16 +9,7 @@
 }
 
 html, body {
-  height: 100vh;
-}
-
-body {
-  @margin-zero();
-}
-
-img {
-  max-width: @100-tage;
-  height: auto;
+  height: @100-vh;
 }
 
 button {
@@ -26,7 +17,23 @@ button {
 }
 
 button:disabled {
-  background:#b9b9b9;
-  color: #3b3b3b;
   cursor: not-allowed;
 }
+
+
+/* 
+
+// button color styles also removed for now
+
+button:disabled {
+  background:#b9b9b9;
+  color: #3b3b3b;
+}
+
+//Image styles removed for now
+
+img {
+  max-width: @100-tage;
+  height: auto;
+}
+*/

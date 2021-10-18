@@ -1,21 +1,11 @@
 
-//detached rulesets
+// === detached rulesets === //
 
-@color-red: {
-  color: @red-color;
-};
-
-@margin-zero: {
-  margin: 0;
-};
-
-@auto-margin: {
-  margin: 0 auto;
-};
+// A. Display
 
 @block: {
   display: block;
-};
+}
 
 @grid: {
   display: grid;
@@ -25,17 +15,29 @@
   display: flex;
 }
 
-@justify-center: {
+@justifyContent-center: {
   justify-content: center;
 }
 
-@justify-space-btw: {
+@justifyContent-space-btw: {
   justify-content: space-between;
 }
 
-@align-center: {
+@alignItems-center: {
   align-items: center;
 }
+
+// B. Margin
+
+@margin-zero: {
+  margin: 0;
+};
+
+@auto-margin: {
+  margin: 0 auto;
+};
+
+// D. Overflow
 
 @x-auto: {
   overflow-x: auto;
@@ -46,12 +48,9 @@
 }
 
 
+// === mixins === //
 
-//mixins
-
-.width(@width-value) {
-  width: @width-value;
-}
+// A. Display (with or without margin auto)
 
 .block-auto() {
   @block();
@@ -65,11 +64,20 @@
 
 .flex-space-btw() {
   @flex();
-  @justify-space-btw();
+  @justifyContent-space-btw();
 }
 
 .flex-center() {
   @flex();
-  @justify-center();
-  @align-center();
+  @justifyContent-center();
+  @alignItems-center();
 }
+
+
+// B. Width
+
+.width(@width-value) {
+  width: @width-value;
+}
+
+// C. Reset
