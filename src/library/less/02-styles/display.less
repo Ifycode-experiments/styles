@@ -1,5 +1,9 @@
 
-/* display - structure & images */
+/*================
+display css styles
+================*/
+
+//=== block ===
 
 .b {
   @b();
@@ -11,26 +15,17 @@
 
 .b-container {
   .b-auto();
-  .width(97%);
-  @media @small-devices {
-    .width(94%);
-  }
-  @media @medium-devices {
-    .width(88%);
-  }
-  @media @large-devices {
-    .width(85%);
-  }
+  @device-widths();
 }
 
-//------- grid ----------
+//=== grid ===
 
 .grid {
   @grid();
 }
 
 
-//------- flex ----------
+//=== flex ===
 
 .f {
   @f();
@@ -38,6 +33,24 @@
 
 .f-auto {
   .f-auto();
+}
+
+.f-col {
+  .f-col();
+}
+
+.f-col-auto {
+  .f-col-auto();
+}
+
+.f-container {
+  .f-auto();
+  @device-widths();
+}
+
+.f-container-col {
+  .f-col-auto();
+  @device-widths();
 }
 
 .f-sb {

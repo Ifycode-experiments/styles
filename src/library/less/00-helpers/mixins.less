@@ -15,6 +15,12 @@
   display: flex;
 }
 
+// A.ii. Flex (display)
+
+@col: {
+  flex-direction: column;
+}
+
 @jc-center: {
   justify-content: center;
 }
@@ -58,6 +64,16 @@
   @auto();
 }
 
+.f-col() {
+  @f();
+  @col();
+}
+
+.f-col-auto() {
+  .f-col();
+  @auto();
+}
+
 .f-sb() {
   @f();
   @sb();
@@ -70,10 +86,21 @@
 }
 
 
-// B. Width
+// B. Width (detached ruleset and mixin)
+
+@device-widths: {
+  .width(97%);
+  @media @small-devices {
+    .width(94%);
+  }
+  @media @medium-devices {
+    .width(88%);
+  }
+  @media @large-devices {
+    .width(85%);
+  }
+}
 
 .width(@width-value) {
   width: @width-value;
 }
-
-// C. Reset
