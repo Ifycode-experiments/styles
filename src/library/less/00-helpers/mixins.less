@@ -29,11 +29,7 @@
 
 // B. Margin
 
-@margin-zero: {
-  margin: 0;
-};
-
-@auto-margin: {
+@auto: {
   margin: 0 auto;
 };
 
@@ -54,12 +50,12 @@
 
 .b-auto() {
   @b();
-  @auto-margin();
+  @auto();
 }
 
 .flex-auto() {
   @flex();
-  @auto-margin();
+  @auto();
 }
 
 .flex-space-btw() {
