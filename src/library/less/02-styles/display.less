@@ -32,115 +32,33 @@
 
 //------- flex ----------
 
-.flex {
-  @flex();
-}
-
-.flex-auto {
-  .flex-auto();
-}
-
-.flex-space-btw {
-  .flex-space-btw();
-}
-
-.flex-space-btw-auto {
-  .flex-space-btw();
-  @auto();
-}
-
-.flex-center {
-  .flex-center();
-}
-
-.flex-j-center {
-  @flex();
-  @justifyContent-center();
-}
-
-.flex-a-center {
-  @flex();
-  @alignItems-center();
-}
-
-
-
-/* align items center
-   justify content center
-
-// Block and grid
-b - block
-g - grid
-
-// Flex styles
-f - flex
-c - center
-sb - space between
-jcc - justifycontent center
-
-.b {
-  @b();
-}
-
-.b-auto {
-  .b-auto();
-}
-
-.b-container {
-  .b-auto();
-  .width(97%);
-  @media @small-devices {
-    .width(94%);
-  }
-  @media @medium-devices {
-    .width(88%);
-  }
-  @media @large-devices {
-    .width(85%);
-  }
-}
-
-//------- grid ----------
-
-.g {
-  @grid();
-}
-
-
-//------- flex ----------
-
 .f {
-  @flex();
+  @f();
 }
 
 .f-auto {
-  .flex-auto();
+  .f-auto();
 }
 
 .f-sb {
-  .flex-space-btw();
+  .f-sb();
 }
 
 .f-sb-auto {
-  .flex-space-btw();
+  .f-sb();
   @auto();
 }
 
-.f-c {
-  .flex-center();
+.f-center {
+  .f-center();
 }
 
-.f-jc-c {
-  @flex();
-  @justifyContent-center();
+.f-jc-center {
+  @f();
+  @jc-center();
 }
 
-.f-ai-c {
-  @flex();
-  @alignItems-center();
+.f-ai-center {
+  @f();
+  @ai-center();
 }
-
-// both align items and justify content are center
-.f-aijc-c
-
-*/

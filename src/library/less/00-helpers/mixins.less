@@ -11,19 +11,19 @@
   display: grid;
 }
 
-@flex: {
+@f: {
   display: flex;
 }
 
-@justifyContent-center: {
+@jc-center: {
   justify-content: center;
 }
 
-@justifyContent-space-btw: {
+@sb: {
   justify-content: space-between;
 }
 
-@alignItems-center: {
+@ai-center: {
   align-items: center;
 }
 
@@ -53,20 +53,20 @@
   @auto();
 }
 
-.flex-auto() {
-  @flex();
+.f-auto() {
+  @f();
   @auto();
 }
 
-.flex-space-btw() {
-  @flex();
-  @justifyContent-space-btw();
+.f-sb() {
+  @f();
+  @sb();
 }
 
-.flex-center() {
-  @flex();
-  @justifyContent-center();
-  @alignItems-center();
+.f-center() {
+  @f();
+  @jc-center();
+  @ai-center();
 }
 
 
