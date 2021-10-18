@@ -1,6 +1,6 @@
-# scss-helper-library
+# styles-library
 
-Contribute to the scss-helper-library. This is meant to replace [less-css-helper-library](https://github.com/code-collabo/less-css-helper-library). Still in development. We want the repo/project to contain SCSS and LESS and also be production suitable. You could also help with [documentation](https://code-collabo.gitbook.io/scss-helper-library/).
+Contribute to the styles-library. This is meant to replace [less-css-helper-library](https://github.com/code-collabo/less-css-helper-library). Still in development. We want the repo/project to contain SCSS and LESS and also be production suitable. You could also help with [documentation](https://code-collabo.gitbook.io/styles-library/).
 
 #### Start development server
 ````

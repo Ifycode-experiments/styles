@@ -1,5 +1,5 @@
 {
-  "name": "@code-collabo/scss-helper-library",
+  "name": "@code-collabo/styles-library",
   "version": "1.0.0",
   "description": "Helper less/css library made by Code Collabo community, to be used in any frontend project",
   "main": "buildScripts/srcServer.js",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/code-collabo/scss-helper-library.git"
+    "url": "git+https://github.com/code-collabo/styles-library.git"
   },
   "keywords": [
     "css",
@@ -32,9 +32,9 @@
   "author": "Obiagba Mary | Code Collabo Community",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/code-collabo/scss-helper-library/issues"
+    "url": "https://github.com/code-collabo/styles-library/issues"
   },
-  "homepage": "https://github.com/code-collabo/scss-helper-library#readme",
+  "homepage": "https://github.com/code-collabo/styles-library#readme",
   "dependencies": {
     "less": "^4.1.1"
   },
