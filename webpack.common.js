@@ -1,3 +1,4 @@
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 const common = {
   entry: {
@@ -5,12 +6,17 @@ const common = {
     index: './src/index.js',
 
     //library (all styles) entry point
-    styles: './src/library/js/styles.js',
-    
-    //library (partials styles) entry points
-    reset: './src/library/js/partials/reset.js',
-    display: './src/library/js/partials/display.js'
-  }
+    styles: './src/library/js/styles.js'
+  },
+  plugins: [
+     //create HTML file that includes reference to bundled js
+     new HtmlWebpackPlugin({
+      template: 'src/index.html',
+      chunks: ['index', 'styles'],
+      inject: true,
+      scriptLoading: 'blocking'
+    })
+  ]
 }
 
 export default common;

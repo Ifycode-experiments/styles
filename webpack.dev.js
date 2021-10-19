@@ -1,11 +1,15 @@
 import { merge } from 'webpack-merge';
 import common from './webpack.common';
 import { resolve } from 'path';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 const config = merge(common, {
   mode: 'development',
   devtool: 'inline-source-map',
+  entry: {
+    //library (partials styles) entry points
+    reset: './src/library/js/partials/reset.js',
+    display: './src/library/js/partials/display.js'
+  },
   output: {
     filename: '[name].bundle.js',
     path: resolve(__dirname, '/src/'),
@@ -22,15 +26,7 @@ const config = merge(common, {
         ]
       }
     ]
-  },
-  plugins: [
-    //create HTML file that includes reference to bundled js
-    new HtmlWebpackPlugin({
-      template: 'src/index.html',
-      inject: true,
-      scriptLoading: 'blocking'
-    })
-  ]
+  }
 });
 
 export default config;
