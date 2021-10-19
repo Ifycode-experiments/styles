@@ -3,6 +3,9 @@
 ## npmrc file
 .npmrc
 
+## unused folder
+unused/
+
 # compiled output
 /dist
 /tmp

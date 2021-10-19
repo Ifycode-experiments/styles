@@ -2,23 +2,14 @@
 /* reset styles */
 
 * {
-  @margin-zero();
+  margin: 0;
   border: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 html, body {
-  height: 100vh;
-}
-
-body {
-  @margin-zero();
-}
-
-img {
-  max-width: @100-tage;
-  height: auto;
+  height: @100-vh;
 }
 
 button {
@@ -26,7 +17,5 @@ button {
 }
 
 button:disabled {
-  background:#b9b9b9;
-  color: #3b3b3b;
   cursor: not-allowed;
 }

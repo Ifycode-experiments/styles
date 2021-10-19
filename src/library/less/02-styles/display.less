@@ -1,0 +1,78 @@
+
+/*================
+display css styles
+================*/
+
+//=== block ===
+
+.b {
+  @b();
+}
+
+.b-auto {
+  .b-auto();
+}
+
+.b-container {
+  .b-auto();
+  @device-widths();
+}
+
+
+//=== grid ===
+
+.g {
+  @g();
+}
+
+
+//=== flex ===
+
+.f {
+  @f();
+}
+
+.f-auto {
+  .f-auto();
+}
+
+.f-col {
+  .f-col();
+}
+
+.f-col-auto {
+  .f-col-auto();
+}
+
+.f-container {
+  .f-auto();
+  @device-widths();
+}
+
+.f-container-col {
+  .f-col-auto();
+  @device-widths();
+}
+
+.f-sb {
+  .f-sb();
+}
+
+.f-sb-auto {
+  .f-sb();
+  @auto();
+}
+
+.f-center {
+  .f-center();
+}
+
+.f-jc-center {
+  @f();
+  @jc-center();
+}
+
+.f-ai-center {
+  @f();
+  @ai-center();
+}

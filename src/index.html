@@ -4,14 +4,69 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | scss-helper-library</title>
+  <title>Home | styles-library</title>
 </head>
 <body>
-  <div class="block-auto div">
+  <div class="b-auto div">
 
-    <h1>SCSS-helper-library</h1>
-    <p>Although this is meant to replace the less-css-helper-library, see <a href="https://www.npmjs.com/package/@code-collabo/less-css-helper-library">less-css-helper-library</a> for how to use the library for now. This web page will be updated soon to contain accurate details and documentation of the scss-helper-library. You can help contribute to that too. All types of input or contributions welcome.</p>
-    
+    <h1>Collabo styles-library</h1>
+    <p>This is temporary documentation for the styles-library, which will replace the <a href="https://www.npmjs.com/package/@code-collabo/less-css-helper-library">less-css-helper-library</a>. You can help contribute to code and/or documantation too. All types of input or contributions welcome.</p>
+
+    <h2>Class names, detached rulesets and mixins</h2>
+    <div>
+      <h3>Margin auto (detached rulesets and/or mixins only)</h3>
+      <ul>
+        <li>auto ➾ margin right and left set to auto (margin top and bottom set to zero)</li>
+      </ul>
+
+      <h3>Block display</h3>
+      <ul>
+        <li>b ➾ block display</li>
+      </ul>
+      <p>Display + margin auto:</p>
+      <ul>
+        <li>b-auto ➾ b + auto</li>
+      </ul>
+      <p>Container (display) style, useful as outer container: </p>
+      <ul>
+        <li>b-container ➾ b-auto + width</li>
+      </ul>
+
+      <h3>Flex display (detached rulesets and/or mixins only)</h3>
+      <ul>
+        <li>col ➾ flex-direction set to column</li>
+        <li>sb ➾ justify-content set to space-between</li>
+        <li>jc-center ➾ justify-content set to center</li>
+        <li>ai-center ➾ align-items set to center</li>
+      </ul>
+
+      <h3>Flex display</h3>
+      <ul>
+        <li>f ➾ flex display</li>
+        <li>f-col ➾ f + col</li>
+        <li>f-sb ➾ f + sb</li>
+        <li>f-center ➾ f + jc-center + ai-center</li>
+        <li>f-jc-center ➾ f + jc-center</li>
+        <li>f-ai-center ➾ f + ai-center</li>
+      </ul>
+  
+      <p>Display + margin auto:</p>
+      <ul>
+        <li>f-auto ➾ f + auto</li>
+        <li>f-col-auto ➾ f-col + auto</li>
+        <li>f-sb-auto ➾ f-sb + auto</li>
+      </ul>
+      <p>Container (display) styles, useful as outer containers: </p>
+      <ul>
+        <li>f-container ➾ f-auto + width</li>
+        <li>f-container-col ➾ f-col-auto + width</li>  
+      </ul>
+  
+      <h3>Grid display</h3>
+      <ul>
+        <li>g ➾ grid display</li>
+      </ul>
+    </div>
   </div>
 </body>
 </html>

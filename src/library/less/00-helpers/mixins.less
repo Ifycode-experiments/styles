@@ -1,0 +1,106 @@
+
+// === detached rulesets === //
+
+// A. Display
+
+@b: {
+  display: block;
+}
+
+@g: {
+  display: grid;
+}
+
+@f: {
+  display: flex;
+}
+
+// A.ii. Flex (display)
+
+@col: {
+  flex-direction: column;
+}
+
+@jc-center: {
+  justify-content: center;
+}
+
+@sb: {
+  justify-content: space-between;
+}
+
+@ai-center: {
+  align-items: center;
+}
+
+// B. Margin
+
+@auto: {
+  margin: 0 auto;
+};
+
+// D. Overflow
+
+@x-auto: {
+  overflow-x: auto;
+}
+
+@x-hidden: {
+  overflow: hidden;
+}
+
+
+// === mixins === //
+
+// A. Display (with or without margin auto)
+
+.b-auto() {
+  @b();
+  @auto();
+}
+
+.f-auto() {
+  @f();
+  @auto();
+}
+
+.f-col() {
+  @f();
+  @col();
+}
+
+.f-col-auto() {
+  .f-col();
+  @auto();
+}
+
+.f-sb() {
+  @f();
+  @sb();
+}
+
+.f-center() {
+  @f();
+  @jc-center();
+  @ai-center();
+}
+
+
+// B. Width (detached ruleset and mixin)
+
+@device-widths: {
+  .width(97%);
+  @media @small-devices {
+    .width(94%);
+  }
+  @media @medium-devices {
+    .width(88%);
+  }
+  @media @large-devices {
+    .width(85%);
+  }
+}
+
+.width(@width-value) {
+  width: @width-value;
+}

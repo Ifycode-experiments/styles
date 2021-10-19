@@ -1,17 +1,11 @@
 import { merge } from 'webpack-merge';
 import common from './webpack.common';
 import { resolve } from 'path';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
-const config = merge(common, {
+const commonProd = {
   mode: 'production',
   devtool: 'source-map',
-  output: {
-    filename: '[name].bundle.js',
-    path: resolve(__dirname, 'dist'),
-    publicPath: '/'
-  },
   module: {
     rules: [
       {
@@ -23,20 +17,48 @@ const config = merge(common, {
         ]
       }
     ]
+  }
+}
+
+
+const config = merge(commonProd, common, {
+  output: {
+    filename: '[name].bundle.js',
+    path: resolve(__dirname, 'dist'),
+    publicPath: '/'
   },
   plugins: [
     //Generate an external css file
     new MiniCssExtractPlugin( {
       filename: '[name].css'
-    }),
-  
-    //create HTML file that includes reference to bundled js
-    new HtmlWebpackPlugin({
-      template: 'src/index.html',
-      inject: true,
-      scriptLoading: 'blocking'
     })
   ]
 });
 
-export default config;
+
+const modularizedCSSconfig = merge(commonProd, {
+  entry: {
+    /*============================================
+    NOTE: Always update the entry point in the dev 
+    config with whatever new entry points you add 
+    here.
+    ============================================*/
+
+    //library (modules styles) entry points
+    reset: './src/library/js/modules/reset.js',
+    display: './src/library/js/modules/display.js'
+  },
+  output: {
+    filename: '[name].bundle.js',
+    path: resolve(__dirname, 'dist/modules/'),
+    publicPath: '/'
+  },
+  plugins: [
+    //Generate an external css file
+    new MiniCssExtractPlugin( {
+      filename: '[name].css'
+    })
+  ]
+});
+
+export default [config, modularizedCSSconfig];
