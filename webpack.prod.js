@@ -33,6 +33,7 @@ const config = merge(common, {
     //create HTML file that includes reference to bundled js
     new HtmlWebpackPlugin({
       template: 'src/index.html',
+      chunks: ['index', 'styles'],
       inject: true,
       scriptLoading: 'blocking'
     })
