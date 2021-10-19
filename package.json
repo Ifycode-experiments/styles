@@ -10,9 +10,11 @@
     "lint": "esw webpack.* src buildScripts --color",
     "lint:watch": "npm run lint -- --watch",
     "clean-dist": "rimraf ./dist && mkdir dist",
+    "build-dist": "babel-node buildScripts/distServer.js",
+    "cleanjs": "babel-node clean.js",
     "prebuild": "npm-run-all clean-dist",
     "build": "babel-node buildScripts/build.js",
-    "postbuild": "babel-node buildScripts/distServer.js"
+    "postbuild": "npm-run-all --parallel build-dist cleanjs"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
