@@ -44,9 +44,9 @@ const modularizedCSSconfig = merge(commonProd, {
     here.
     ============================================*/
 
-    //library (partials styles) entry points
-    reset: './src/library/js/partials/reset.js',
-    display: './src/library/js/partials/display.js'
+    //library (modules styles) entry points
+    reset: './src/library/js/modules/reset.js',
+    display: './src/library/js/modules/display.js'
   },
   output: {
     filename: '[name].bundle.js',
